@@ -33,8 +33,8 @@ RUN echo "@community https://nl.alpinelinux.org/alpine/v3.10/community" >> /etc/
     php7-ldap@community \
     php7-simplexml@community \
  && cd /tmp \
- && wget -q https://www.rainloop.net/repository/webmail/rainloop-community-latest.zip \
- && wget -q https://www.rainloop.net/repository/webmail/rainloop-community-latest.zip.asc \
+ && wget -q https://github.com/RainLoop/rainloop-webmail/releases/download/v1.15.0/rainloop-community-1.15.0.zip \
+ && wget -q https://github.com/RainLoop/rainloop-webmail/releases/download/v1.15.0/rainloop-community-1.15.0.zip.asc \
  && wget -q https://www.rainloop.net/repository/RainLoop.asc \
  && gpg --import RainLoop.asc \
  && FINGERPRINT="$(LANG=C gpg --verify rainloop-community-latest.zip.asc rainloop-community-latest.zip 2>&1 \
